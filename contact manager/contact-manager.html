@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Manager</title>
+
+    <link rel = "stylesheet" href = "contactmanager.css">
+      <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+  </head>
+  <body>
+    <nav class = "navbar navbar-default navbar-fixed-top">
+      <div class = "container">
+        <div class = "navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          <a class = "navbar-brand text-uppercase" href = '#'>
+My Contact
+          </a>
+        </div>
+        <div class = "collapse navbar-collapse" id = "navbar-collapse">
+          <div class = "nav navbar-right navbar-btn">
+            <a href = "form." class = "btn btn-default">
+  <i id = "addbtn" class = "glyphicon glyphicon-plus"></i>
+              Add Contact
+         
+              </a>
+            </div>
+          </div>
+</div>
+</nav>
+<div class = "container">
+  <div class = "row">
+      <div class = "col-md-3">
+        <div class = "list-group">
+          <a href = "#"class = "list-group-item active">All Contact <span class ="badge">10</span></a>
+          <a href = ""class = "list-group-item">Family  <span class ="badge">4</span></a>
+          <a href = ""class = "list-group-item">Friends <span class ="badge">2</span></a>
+<a href = "" class = "list-group-item">Other <span class ="badge">1</span></a>
+</div>
+</div>
+<div class = "col-md-9">
+<div class = "panel panel-default">
+  <div class = "panel panel-default">
+    <div class = "panel-heading">
+      <strong>ADD CONTACT</strong>
+    </div>
+    <div class = "panel-body">
+      <div class = "form-horizontal">
+        <div class = "row">
+          <div class = "col-md-8">
+            <div class = "form-group">
+              <form id="addContact" autocomplete="on">
+              <label for = "name" class = "control-label col-md-3">Name</label>
+<div class = "col-md-8">
+<input data-bind="value: conName" name="name" placeholder="Contact Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'" required/>
+</div>
+</div>
+<div class = "form-group">
+<label for = "phone" class = "control-label col-md-3">Phone</label>
+<div class = "col-md-8">
+<input data-bind="value: phone" name="phone" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" required/>
+</div>
+</div>
+<div class = "form-group">
+<label for = "company" class = "control-label col-md-3">Company</label>
+<div class = "col-md-8">
+<input type = "text" name = "Company" placeholder = "Optional" id = "company" class = "form-control">
+  </div>
+</div>
+<div class = "form-group">
+  <label for = "email" class = "control-label col-md-3">Email</label>
+<div class = "col-md-8">
+<input data-bind="value: email" type="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" required/>
+</div>
+</div>
+<div class = "form-group">
+  <label for = "address" class = "control-label col-md-3">Address</label>
+<div class = "col-md-8">
+<textarea name = "address" placeholder = "Address" id = "address" required rows = "3" class = "form-control"></textarea>
+</div>
+</div>
+<div class = "form-group">
+  <label for = "Group" class = "control-label col-md-3">Group</label>
+<div class = "col-md-5">
+<select name = "group" id = "group" class = "form-control">
+<option value = "">Select Group</option>
+<option value = "1">Family</option>
+<option value = "2">Friend</option>
+<option value = "3">Other</option>
+</select>
+</div>
+<div class = "col-md-3">
+  <a href = "#" id = "add-group-btn" class = "btn btn-default btn-block">Add Group</a>
+</div>
+</div>
+<div class = "form-group" id = "add-new-group">
+  <div class = "col-md-offset-3 col-md-8">
+    <div class = "input-group">
+      <input type = "text" name = "new_group" id= "new-group" class = "form-control">
+<span class = "input-group-btn">
+  <a href = "#" class = "btn btn-default"></a>
+  <i class = "glyphicon glyphicon-ok"></i>
+</span>
+    </div>
+
+</div>
+</div>
+        <div class = "col-md-4">
+          <div class="fileinput fileinput-new" data-provides="fileinput">
+    <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
+      <img src="http://placehold.it/150x150" alt="Photo">
+    </div>
+    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;"></div>
+    <div class = "text-center">
+      <span class="btn btn-default btn-file"><span class="fileinput-new">
+      </span><span class="fileinput-new"></span><input type="file" name="..."></span>
+<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+    </div>
+  </div>
+          </div>
+          </div>
+          </div>
+    </div>
+
+    <div class = "panel-footer">
+      <div class = "row">
+        <div class = "col-md-8">
+          <div class = "row">
+            <div class = "col-md-offset-3 col-md-6">
+              <button id = "myBtn" type = "submit"  class = "btn btn-primary">Save</button>
+              <a href = "#" class = "btn btn-default" id = "cancel">Cancel</a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+  </div>
+  </div>
+  </div>
+</form>
+<ul class="pagination">
+      <li>
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a>1</a></li>
+      <li class = "active"><a href="file:///C:/Users/Dipsikha/Desktop/assignment/contact-manager.html">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+    <script src="contact.js"></script>
+    
+
+
+
+
+  </body>
+</html>
